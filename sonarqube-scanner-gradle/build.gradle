@@ -1,5 +1,5 @@
 plugins {
-  id "org.sonarqube" version "2.6.2"
+  id "org.sonarqube" version "2.7"
 }
 
 description = 'Example of SonarQube Scanner for Gradle Usage'
@@ -45,3 +45,9 @@ dependencies {
 // Define the main class for the application
 mainClassName = 'App'
 
+jacocoTestReport {
+    reports {
+        xml.enabled true
+	html.enabled false
+    }
+}
